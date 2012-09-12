@@ -73,6 +73,7 @@ GEM
       multi_json
       ruby-hmac (>= 0.3.2)
       typhoeus
+    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -109,7 +110,6 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.6)
     therubyracer (0.10.2)
       libv8 (~> 3.3.10)
     thin (1.4.1)
@@ -142,9 +142,9 @@ DEPENDENCIES
   jquery-rails
   less-rails-bootstrap
   panda (~> 1.5.0)
+  pg
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
-  sqlite3
   thin
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
