@@ -11,7 +11,7 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.create!(params[:video])
-    redirect_to :action => :show, :id => @video.id 
+    redirect_to :action => :index
   end
   
   def index
