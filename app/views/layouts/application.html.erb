@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kraft Videos</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Kraft Videos</a>
+    <p class="navbar-text pull-right">
+     <a class="navbar-link" href="#">	
+  </div>
+</div>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>  
+  <%= javascript_include_tag 'http://cdn.pandastream.com/u/1.4/jquery.panda-uploader.min.js' %>
+</head>
+<body>
+  <%= yield %>
+  <div class="container">
+</body>
+</html>
