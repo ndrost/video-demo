@@ -39,6 +39,6 @@ gem 'jquery-rails'
 
 gem 'thin'
 gem 'panda', '~> 1.5.0'
-gem "twitter-bootstrap-rails", :group => :assets
+gem "twitter-bootstrap-rails"
 gem 'less-rails-bootstrap'
 gem 'pg'
