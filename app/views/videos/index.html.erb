@@ -5,14 +5,14 @@
 
 <table class="table table-striped">
 <% @videos.each do |vid| %>
-<% @encodings.each do |end| %>
+<% @encodings.each do |enc| %>
 
 <tr>
 <td><%= vid.name %></td>
 <td>
 	<video id="movie" preload="none" 
-	    poster="<%= encodings.screenshots.first %>" controls>
-	    <source src="<%= vid.url %>" type="video/mp4">
+	    poster="<%= enc.screenshots.first %>" controls>
+	    <source src="<%= enc.url %>" type="video/mp4">
 	</video>
 	
 </td>
