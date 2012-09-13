@@ -1,4 +1,6 @@
+<div class="alert alert-success">
 <%= link_to('Upload a Video!', {:controller => "videos", :action => "new"}) %>
+</div>
 <% content_for :header do %>
   <%= javascript_include_tag '/panda_uploader/swfobject' %>
 <% end %>
@@ -9,7 +11,9 @@
 <% encoding = encodings.first %>
 
 <tr>
-<td><%= vid.title %></td>
+<td><%= vid.title %>
+
+</td>
 
 <td>
 	<video id="movie" preload="none" 
@@ -17,6 +21,17 @@
 	    <source src="<%= encoding.url %>" type="video/mp4">
 	</video>
 	
+</td>
+<td>
+<div class="form-actions">
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_video_path(vid), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              video_path(vid.id),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 </td>
 
 </tr>
