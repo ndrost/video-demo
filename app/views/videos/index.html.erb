@@ -4,14 +4,17 @@
 <% end %>
 
 <table class="table table-striped">
-<% @videos.zip(@encodings).each do |vid,enc| %>
+<% @lvideos.each do |vid| %>
+<% encodings = Panda::Encoding.video(vid.panda_video_id) %>
+<% encoding = encodings.first %>
 
 <tr>
 <td><%= vid.title %></td>
+
 <td>
 	<video id="movie" preload="none" 
-	    poster="<%= enc.screenshots.first %>" controls>
-	    <source src="<%= enc.url %>" type="video/mp4">
+	    poster="<%= encoding.screenshots.first %>" controls>
+	    <source src="<%= encoding.url %>" type="video/mp4">
 	</video>
 	
 </td>

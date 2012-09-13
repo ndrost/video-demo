@@ -48,3 +48,5 @@ group :development, :test do
     gem 'sqlite3'
 end
 
+gem 'pry'
+gem 'rack-webconsole-pry', :require => 'rack-webconsole'

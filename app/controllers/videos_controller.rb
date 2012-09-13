@@ -15,7 +15,8 @@ class VideosController < ApplicationController
   end
   
   def index
-    @videos=Video.all
+    @lvideos = Video.all
+    @videos=Panda::Video.all
     @encodings = Panda::Encoding.all
   end
 end

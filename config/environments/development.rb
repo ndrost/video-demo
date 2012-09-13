@@ -34,4 +34,6 @@ PandaExample::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  Rack::Webconsole.key_code = "231"
 end
+
