@@ -16,11 +16,12 @@
 </td>
 
 <td>
-	<video class="pagination-centered" id="movie" preload="none" 
+<div class="pagination-centered">
+	<video id="movie" preload="none" 
 	    poster="<%= encoding.screenshots.first %>" controls>
 	    <source src="<%= encoding.url %>" type="video/mp4">
 	</video>
-	
+</div>
 <div class="form-actions pagination-centered">
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_video_path(vid), :class => 'btn' %>
