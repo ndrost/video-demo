@@ -16,6 +16,11 @@
 </td>
 
 <td>
+<div class="pagination-centered">
+	<video id="movie" preload="none" 
+	    poster="<%= encoding.screenshots.first %>" controls>
+	    <source src="<%= encoding.url %>" type="video/mp4">
+	</video>
 <div class="form-actions pagination-centered">
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_video_path(vid), :class => 'btn' %>
@@ -24,11 +29,6 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
-<div class="pagination-centered">
-	<video id="movie" preload="none" 
-	    poster="<%= encoding.screenshots.first %>" controls>
-	    <source src="<%= encoding.url %>" type="video/mp4">
-	</video>
 </div>
 </div>
 </td>
